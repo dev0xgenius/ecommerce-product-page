@@ -18,3 +18,5 @@
 # Folders to ignore
 node_modules/
 design/
+
+test.txt
