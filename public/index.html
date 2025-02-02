@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,70 @@
   <meta name="description" content="Frontendmentor solution project" />
   
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel ="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
+
 <body>
   <div class="container">
     <header>
+      <div class="container-fluid">
+        <span class="menu-icon">
+          <img src="/images/icon-menu.svg" class="img-fluid" alt="menu icon" />
+        </span>
+        <h1>sneakers</h1>
+        <div class="profile__section">
+          <button>
+            <img src="/images/icon-cart.svg" class="img-fluid" alt="cart icon" />
+          </button>
+          <span>
+            <img src="/images/image-avatar.png" class="img-fluid" alt="user avatar" />
+          </span>
+        </div>
+      </div>
     </header>
-    <main></main>
+    <main>
+      <div class="container-fluid">
+        <div class="product-display">
+          <div class="">
+            <img src="/images/image-product-1.jpg" class="img-fluid" />
+          </div>
+          <button>Next</button>
+          <button>Prev</button>
+        </div>
+        <div class="content">
+          <div class="text">
+            <b>Sneaker Company</b>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+          </div>
+          <div class="pricing">
+            <div class="price">
+              <span>$125</span>
+              <span>50%</span>
+              <span>$250</span>
+            </div>
+            <form class="order" action="#">
+              <input type="number" name="" id="" value="" />
+              <button type="submit">
+                <span><img src="/images/icon-cart.svg" /></span>
+                <span>Add to cart</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="attribution">
       <div class="wrapper">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="#">Your Name Here</a>.
       </div>
     </footer>
   </div>
 </body>
+
 </html>
