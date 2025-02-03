@@ -13,14 +13,14 @@
 </head>
 
 <body>
-  <div class="container border g-0">
+  <div class="container-sm border g-0">
     <header>
       <div class="container-fluid row align-items-center justify-content-between g-0 p-4 py-3">
         <div class="main col-9 d-flex gap-3 align-items-center">
           <span class="menu-icon mb-2">
-            <img src="/images/icon-menu.svg" width="18px" alt="menu icon" />
+            <img src="/images/icon-menu.svg" width="20px" alt="menu icon" />
           </span>
-          <h1 class="fw-bolder">sneakers</h1>
+          <h1 class="fw-bolder h2">sneakers</h1>
         </div>
         <div class="profile-section col-3 d-flex align-items-center justify-content-center mb-2 gap-3">
           <span>
@@ -33,13 +33,35 @@
       </div>
     </header>
     <main>
-      <div>
-        <div class="product-display">
-          <div class="">
-            <img src="/images/image-product-1.jpg" class="img-fluid" />
+      <div class="container-fluid g-0">
+        <div class="carousel slide" id="productDisplay">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/image-product-1.jpg" class="d-block w-100" alt="Sneaker image 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="/images/image-product-2.jpg" class="d-block w-100" alt="Sneaker image 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="/images/image-product-3.jpg" class="d-block w-100" alt="Sneaker image 3" />
+            </div>
           </div>
-          <button>Next</button>
-          <button>Prev</button>
+          <button class="carousel-control-prev ps-4" type="button" data-bs-target="#productDisplay" data-bs-slide="prev">
+            <div class="wrapper">
+              <span aria-hidden="true">
+                <img src="/images/icon-previous.svg" width="12px" alt="previous" />
+              </span>
+              <span class="visually-hidden">Previous</span>
+            </div>
+          </button>
+          <button class="carousel-control-next pe-4" type="button" data-bs-target="#productDisplay" data-bs-slide="next">
+            <div class="wrapper">
+              <span aria-hidden="true">
+                <img src="/images/icon-next.svg" width="12px" alt="next" />
+              </span>
+              <span class="visually-hidden">Previous</span>
+            </div>
+          </button>
         </div>
         <div class="content">
           <div class="text">

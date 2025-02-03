@@ -13,3 +13,16 @@ body {
     max-width: 375px;
   }
 }
+
+.carousel {
+  button .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 500px;
+  }
+}
