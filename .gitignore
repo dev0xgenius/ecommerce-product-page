@@ -18,5 +18,6 @@
 # Folders to ignore
 node_modules/
 design/
+public/css/
 
 test.txt
