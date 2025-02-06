@@ -8,6 +8,10 @@ body {
   justify-content: center;
   width: 100%;
   height: auto;
+  
+  .container-sm {
+    max-width: 375px;
+  }
 }
 
 .carousel {
