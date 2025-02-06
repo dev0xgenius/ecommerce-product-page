@@ -2,6 +2,7 @@
 
 $white: #fff;
 $black: #000;
+
 @import "custom-carousel";
 
 @import "../../node_modules/bootstrap/scss/variables";
@@ -20,6 +21,8 @@ $black: #000;
 @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/forms";
 
 @import "../../node_modules/bootstrap/scss/helpers";
 @import "../../node_modules/bootstrap/scss/utilities/api";
