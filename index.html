@@ -8,7 +8,7 @@
   <meta name="description" content="Frontendmentor solution project" />
   
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="src/scss/styles.scss" />
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
@@ -18,16 +18,16 @@
       <div class="container-fluid row align-items-center justify-content-between g-0 p-4 py-3">
         <div class="main col-9 d-flex gap-3 align-items-center">
           <span class="menu-icon mb-2">
-            <img src="/images/icon-menu.svg" width="20px" alt="menu icon" />
+            <img src="src/assets/images/icon-menu.svg" width="20px" alt="menu icon" />
           </span>
           <h1 class="fw-bolder h2">sneakers</h1>
         </div>
         <div class="profile-section col-3 d-flex align-items-center justify-content-center mb-2 gap-3">
           <span>
-            <img src="/images/icon-cart.svg" width="24px" alt="cart icon" />
+            <img src="src/assets/images/icon-cart.svg" width="24px" alt="cart icon" />
           </span>
           <span>
-            <img src="/images/image-avatar.png" width="24px" alt="user avatar" />
+            <img src="src/assets/images/image-avatar.png" width="24px" alt="user avatar" />
           </span>
         </div>
       </div>
@@ -37,20 +37,20 @@
         <div class="carousel slide" id="productDisplay">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="/images/image-product-1.jpg" class="d-block w-100" alt="Sneaker image 1" />
+              <img src="src/assets/images/image-product-1.jpg" class="d-block w-100" alt="Sneaker image 1" />
             </div>
             <div class="carousel-item">
-              <img src="/images/image-product-2.jpg" class="d-block w-100" alt="Sneaker image 2" />
+              <img src="src/assets/images/image-product-2.jpg" class="d-block w-100" alt="Sneaker image 2" />
             </div>
             <div class="carousel-item">
-              <img src="/images/image-product-3.jpg" class="d-block w-100" alt="Sneaker image 3" />
+              <img src="src/assets/images/image-product-3.jpg" class="d-block w-100" alt="Sneaker image 3" />
             </div>
           </div>
           <button class="carousel-control-prev ps-4" type="button" data-bs-target="#productDisplay"
                                                                                                                                   data-bs-slide="prev">
             <div class="wrapper">
               <span aria-hidden="true">
-                <img src="/images/icon-previous.svg" width="12px" alt="previous" />
+                <img src="src/assets/images/icon-previous.svg" width="12px" alt="previous" />
               </span>
               <span class="visually-hidden">Previous</span>
             </div>
@@ -59,7 +59,7 @@
                                                                                                                                   data-bs-slide="next">
             <div class="wrapper">
               <span aria-hidden="true">
-                <img src="/images/icon-next.svg" width="12px" alt="next" />
+                <img src="src/assets/images/icon-next.svg" width="12px" alt="next" />
               </span>
               <span class="visually-hidden">Previous</span>
             </div>
@@ -82,12 +82,12 @@
             </div>
             <form class="d-flex flex-column gap-2" action="#">
               <div class="counter">
-                <button type="button"><img src="/images/icon-minus.svg" alt="minus symbol" /></button>
+                <button type="button"><img src="src/assets/images/icon-minus.svg" alt="minus symbol" /></button>
                 <input type="number" min="0" value="0" />
-                <button type="button"><img src="/images/icon-plus.svg" alt="plus symbol" /></button>
+                <button type="button"><img src="src/assets/images/icon-plus.svg" alt="plus symbol" /></button>
               </div>
               <button type="submit" class="w-100 border-0 bg-warning text-black text-center fw-bolder p-3 rounded-3">
-                <span class="me-2"><img src="/images/icon-cart.svg" alt="cart image" /></span>
+                <span class="me-2"><img src="src/assets/images/icon-cart.svg" alt="cart image" /></span>
                 <span>Add to cart</span>
               </button>
             </form>
