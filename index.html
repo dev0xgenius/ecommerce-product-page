@@ -15,6 +15,7 @@
 <body>
   <div class="container-sm border g-0">
     <header>
+<<<<<<< Updated upstream:index.html
       <div class="container-fluid row align-items-center justify-content-between g-0 p-4 py-3">
         <div class="main col-9 d-flex gap-3 align-items-center">
           <span class="menu-icon mb-2">
@@ -30,6 +31,41 @@
             <img src="src/assets/images/image-avatar.png" width="24px" alt="user avatar" />
           </span>
         </div>
+=======
+      <div class="container-fluid g-0">
+        <nav class="navbar">
+          <div class="container-fluid w-100 justify-content-start gap-3 g-0 p-4 py-2">
+            <button class="menu-icon mb-2 navbar-toggler border-0 shadow-none p-0" 
+              data-bs-target="#navLinks" data-bs-toggle="offcanvas"
+            >
+              <img src="/images/icon-menu.svg" width="20px" alt="menu icon" />
+            </button>
+            <div class="offcanvas offcanvas-start p-4 border-0">
+              <button class="bg-transparent border-0 d-block" data-bs-target="#navLinks" data-bs-toggle="offcanvas">
+                <img src="/images/icon-close.svg" width="20px" alt="close icon" />
+              </button>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav navbar-expand-sm" id="navLinks">
+                  <li class="nav-item"><a class="nav-link">Collections</a></li>
+                  <li class="nav-item"><a class="nav-link">Men</a></li>
+                  <li class="nav-item"><a class="nav-link">Women</a></li>
+                  <li class="nav-item"><a class="nav-link">About</a></li>
+                  <li class="nav-item"><a class="nav-link">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <h1 class="fw-bolder h2">sneakers</h1>
+            <div class="profile-section d-flex align-items-center justify-content-center m-auto me-2 pb-2 gap-3">
+              <span>
+                <img src="/images/icon-cart.svg" width="24px" alt="cart icon" />
+              </span>
+              <span>
+                <img src="/images/image-avatar.png" width="24px" alt="user avatar" />
+              </span>
+            </div>
+          </div>
+        </nav>
+>>>>>>> Stashed changes:public/index.html
       </div>
     </header>
     <main>
@@ -102,6 +138,6 @@
       </div>
     </footer>
   </div>
+  <script type="module" src="index.js"></script>
 </body>
-
 </html>
