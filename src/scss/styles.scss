@@ -8,10 +8,6 @@ body {
   justify-content: center;
   width: 100%;
   height: auto;
-  
-  .container-sm {
-    max-width: 375px;
-  }
 }
 
 .carousel {
@@ -54,5 +50,11 @@ body {
     display: inline-block;
     border: none;
     background-color: transparent;
+  }
+}
+
+#menuNavbar {
+  button.navbar-toggler {
+    width: max-content;
   }
 }
