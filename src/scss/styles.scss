@@ -59,6 +59,18 @@ body {
   }
 }
 
-.cart-info .card {
-  min-height: 82vw;
+.profile-section {
+  .cart-info .card {
+    min-height: 82vw;
+  }
+
+  .avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100px;
+    
+    &:hover {
+      border: 2px solid $primary; 
+    }
+  }
 }
