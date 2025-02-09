@@ -24,8 +24,10 @@ body {
 }
 
 .pretext {
+  color: $secondary;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  font-weight: 900;
   font-size: .75rem;
 }
 
@@ -43,6 +45,7 @@ body {
     text-align: center;
     font-weight: bolder;
     border: none;
+    outline: none;
     background-color: transparent;
   }
   
@@ -67,10 +70,15 @@ body {
   .avatar {
     width: 1.5rem;
     height: 1.5rem;
+    overflow: hidden;
     border-radius: 100px;
     
     &:hover {
       border: 2px solid $primary; 
     }
   }
+}
+
+.content p {
+  color: $gray;
 }

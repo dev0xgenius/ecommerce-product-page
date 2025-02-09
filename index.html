@@ -102,28 +102,30 @@
         </div>
         <div class="content p-4 container-fluid g-0">
           <div class="text row flex-column gap-2">
-            <span class="text-secondary fw-bold pretext">Sneaker Company</span>
-            <h1 class="fw-bolder">Fall Limited Edition Sneakers</h1>
+            <span class="pretext">Sneaker Company</span>
+            <h1 class="fw-bolder display-3">Fall Limited Edition Sneakers</h1>
             <p>
               These low-profile sneakers are your perfect casual wear companion. Featuring a
               durable rubber outer sole, they’ll withstand everything the weather can offer.
             </p>
           </div>
-          <div class="pricing container-fluid g-0">
-            <div class="price d-flex gap-2 align-items-center mb-2">
-              <span class="h2 fw-bolder">$125</span>
-              <span class="badge bg-black h-auto">50%</span>
-              <span class="text-decoration-line-through text-secondary fw-bolder m-auto me-0">$250</span>
+          <div class="pricing container-fluid g-0 row gap-2 mt-2">
+            <div class="price d-flex align-items-center justify-content-between mb-2">
+              <div class="w-100 d-flex align-items-center gap-3">
+                <span class="h1 fw-bolder">$125.00</span>
+                <span class="badge bg-black h-auto">50%</span>
+              </div>
+              <span class="text-decoration-line-through text-secondary fw-bolder w-100 text-end">$250.00</span>
             </div>
             <form class="d-flex flex-column gap-2" action="#">
               <div class="counter">
-                <button type="button"><img src="src/assets/images/icon-minus.svg" alt="minus symbol" /></button>
-                <input type="number" min="0" value="0" />
-                <button type="button"><img src="src/assets/images/icon-plus.svg" alt="plus symbol" /></button>
+                <button type="button" data-bs-action="minus" ><img src="src/assets/images/icon-minus.svg" alt="minus symbol" /></button>
+                <input type="number" class="border-0" min="0" value="0" />
+                <button type="button" data-bs-action="add"><img src="src/assets/images/icon-plus.svg" alt="plus symbol" /></button>
               </div>
-              <button type="submit" class="w-100 border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3">
-                <span class="me-2"><img src="src/assets/images/icon-cart.svg" alt="cart image" /></span>
-                <span>Add to cart</span>
+              <button type="submit" class="w-100 border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3 shadow-lg">
+                <span><img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" /></span>
+                <span class="ms-3">Add to cart</span>
               </button>
             </form>
           </div>
