@@ -1,8 +1,6 @@
 @import "bootstrap/scss/functions";
 
-$white: #fff;
-$black: #000;
-
+@import "custom-colors";
 @import "custom-carousel";
 
 @import "bootstrap/scss/variables";
@@ -22,8 +20,12 @@ $black: #000;
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/carousel";
 @import "bootstrap/scss/badge";
+
+@import "custom-nav";
+
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
 @import "bootstrap/scss/offcanvas";
 
 @import "bootstrap/scss/helpers";
