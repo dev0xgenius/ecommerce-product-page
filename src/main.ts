@@ -12,7 +12,7 @@ const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new Offcanvas
 const carousel = new Carousel("#productDisplay");
 
 const handleCounter = (evt) => {
-  let counterInput = document.querySelector(".counter input");
+  const counterInput = document.querySelector(".counter input");
   const clickedButton = evt.target;
   const action = clickedButton.getAttribute("data-bs-action");
   
