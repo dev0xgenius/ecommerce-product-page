@@ -100,7 +100,7 @@
             </div>
           </button>
         </div>
-        <div class="content p-4 container-fluid">
+        <div class="content p-4 container-sm">
           <div class="text row flex-column gap-2">
             <span class="pretext">Sneaker Company</span>
             <h1 class="fw-bolder display-3">Fall Limited Edition Sneakers</h1>
@@ -111,21 +111,23 @@
           </div>
           <div class="pricing container-fluid row gap-2 mt-2">
             <div class="price row justify-content-between align-items-center">
-              <div class="col-5 d-flex border border-danger gap-3">
+              <div class="col-5 d-flex align-items-center gap-3">
                 <span class="h1 fw-bolder">$125.00</span>
                 <span class="badge bg-black h-auto">50%</span>
               </div>
-              <span class="col-5 text-decoration-line-through text-secondary fw-bolder text-end border border-success">$250.00</span>
+              <span class="col-5 text-decoration-line-through text-secondary fw-bolder text-end">$250.00</span>
             </div>
-            <form class="row gap-2" action="#">
-              <div class="counter col">
+            <form class="cart-form row gap-2" action="#">
+              <div class="counter col col-sm-4">
                 <button type="button" data-bs-action="minus" ><img src="src/assets/images/icon-minus.svg" alt="minus symbol" /></button>
                 <input type="number" class="border-0" min="0" value="0" />
                 <button type="button" data-bs-action="add"><img src="src/assets/images/icon-plus.svg" alt="plus symbol" /></button>
               </div>
-              <button type="submit" class="w-100 col border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3 shadow-lg">
-                <span><img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" /></span>
-                <span class="ms-3">Add to cart</span>
+              <button type="submit" class="col border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3 shadow-lg">
+                <div class="container-fluid">
+                  <span class="d-inline-block"><img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" /></span>
+                  <span class="ms-2">Add to cart</span>
+                </div>
               </button>
             </form>
           </div>

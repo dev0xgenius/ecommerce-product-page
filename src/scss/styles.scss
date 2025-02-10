@@ -83,3 +83,9 @@ body {
 .content p {
   color: $gray;
 }
+
+.cart-form {
+  button {
+    min-width: max-content;
+  }
+}
