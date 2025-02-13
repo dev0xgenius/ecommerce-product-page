@@ -1,0 +1,7 @@
+body > .container-fluid > header {
+  @include media-breakpoint-up("md") {
+    .nav-link {
+      font-weight: lighter;
+    }
+  }
+}
