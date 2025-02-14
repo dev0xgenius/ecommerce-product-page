@@ -1,4 +1,44 @@
 body > .container-fluid > header {
+  .profile-section {
+    @include media-breakpoint-up("md") {
+      position: relative;
+    }
+    
+    #cartCard {
+      top: 100%; left: 0%;
+      right: 0%;
+      
+      .card {
+        min-width: max-content;
+        min-height: 82vw;
+      }
+      
+      @include media-breakpoint-up("md") {
+        min-width: 16rem;
+        left: -250%;
+        
+        .card {
+          min-height: auto;
+        }
+      }
+    }
+    
+  
+    .avatar {
+      .container-fluid {
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        border-radius: 100px;
+        
+        &:hover {
+          border: 2px solid $primary; 
+        }
+        
+      }
+    }
+  }
+
   @include media-breakpoint-up("md") {
     .nav-link {
       font-weight: lighter;

@@ -50,12 +50,14 @@
               >
                 <img src="src/assets/images/icon-cart.svg" width="24px" alt="cart icon" />
               </button>
-              <span class="avatar col">
+              <a class="avatar col" href="#" role="button" data-bs-target="#cartCard" data-bs-toggle="collapse"
+                aria-label="Toggle cart info" aria-controls="cartCard" aria-expanded="false"
+              >
                 <div class="container-fluid">
                   <img src="src/assets/images/image-avatar.png" width="100%" alt="user avatar" />
                 </div>
-              </span>
-              <div class="collapse position-absolute top-100 start-0 end-0 w-100 z-3" id="cartCard">
+              </a>
+              <div class="collapse position-absolute w-100 z-3" id="cartCard">
                   <div class="container-fluid p-2 h-100">
                     <div class="card shadow-lg rounded-4 border-0">
                       <h6 class="card-header bg-transparent p-4">Cart</h6>

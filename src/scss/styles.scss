@@ -63,34 +63,8 @@ height: auto; */
   }
 }
 
-.profile-section {
-  .cart-info .card {
-    min-height: 82vw;
-  }
-
-  .avatar {
-    .container-fluid {
-      width: 2rem;
-      height: 2rem;
-      overflow: hidden;
-      border-radius: 100px;
-      
-      &:hover {
-        border: 2px solid $primary; 
-      }
-      
-    }
-  }
-}
-
 .content p {
   color: $gray;
-}
-
-.cart-form {
-  button {
-    min-width: max-content;
-  }
 }
 
 @import "section/header";
