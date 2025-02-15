@@ -12,8 +12,8 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head> 
 
-<body class="min-vh-100 w-100 h-auto row align-items-center justify-content-center flex-column">
-  <div class="container-fluid position-relative">
+<body class="min-vh-100 w-100 h-auto row flex-column">
+  <div class="container-sm position-relative">
     <header class="border-bottom border-secondary">
       <div class="container-xl">
         <nav class="navbar navbar-expand-md">
@@ -73,9 +73,26 @@
       </div>
     </header>
     <main>
-      <div class="container-fluid">
-        <div class="carousel carousel-fade" id="productDisplay">
-          <div class="carousel-inner p-sm-5">
+      <div class="container-sm d-lg-flex align-items-center">
+        <div class="carousel carousel-fade row flex-md-row-reverse flex-lg-column-reverse p-lg-5 gap-4" id="productDisplay">
+          <div class="carousel-indicators d-md-flex flex-md-column flex-lg-row col justify-content-md-center 
+            justify-content-lg-between col-md-2 col-lg-12 py-md-5 p-lg-0 gap-0 gap-lg-1">
+            <button class="active" type="button" data-bs-target="#productDisplay" 
+              data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"
+            >
+              <img src="src/assets/images/image-product-1-thumbnail.jpg" alt="Product 1"/>
+            </button>
+            <button type="button" data-bs-target="#productDisplay" data-bs-slide-to="1" aria-label="Slide 2">
+              <img src="src/assets/images/image-product-2-thumbnail.jpg" alt="Product 1"/>
+            </button>
+            <button type="button" data-bs-target="#productDisplay" data-bs-slide-to="2" aria-label="Slide 3">
+              <img src="src/assets/images/image-product-3-thumbnail.jpg" alt="Product 1"/>
+            </button>
+            <button type="button" data-bs-target="#productDisplay" data-bs-slide-to="3" aria-label="Slide 4">
+              <img src="src/assets/images/image-product-4-thumbnail.jpg" alt="Product 1"/>
+            </button>
+          </div>
+          <div class="carousel-inner p-0 col">
             <div class="carousel-item active">
               <img src="src/assets/images/image-product-1.jpg" class="d-block w-100" alt="Sneaker image 1" />
             </div>
@@ -85,9 +102,13 @@
             <div class="carousel-item">
               <img src="src/assets/images/image-product-3.jpg" class="d-block w-100" alt="Sneaker image 3" />
             </div>
+            <div class="carousel-item">
+              <img src="src/assets/images/image-product-4.jpg" class="d-block w-100" alt="Sneaker image 4" />
+            </div>
           </div>
-          <button class="carousel-control-prev ps-4" type="button" data-bs-target="#productDisplay"
-                                                                                                                                  data-bs-slide="prev">
+          <button class="carousel-control-prev ps-4 d-md-none" type="button" 
+            data-bs-target="#productDisplay" data-bs-slide="prev"
+          >
             <div class="wrapper">
               <span aria-hidden="true">
                 <img src="src/assets/images/icon-previous.svg" width="12px" alt="previous" />
@@ -95,8 +116,9 @@
               <span class="visually-hidden">Previous</span>
             </div>
           </button>
-          <button class="carousel-control-next pe-4" type="button" data-bs-target="#productDisplay"
-                                                                                                                                  data-bs-slide="next">
+          <button class="carousel-control-next pe-4 d-md-none" type="button" 
+            data-bs-target="#productDisplay" data-bs-slide="next"
+          >
             <div class="wrapper">
               <span aria-hidden="true">
                 <img src="src/assets/images/icon-next.svg" width="12px" alt="next" />
@@ -114,7 +136,7 @@
               durable rubber outer sole, they’ll withstand everything the weather can offer.
             </p>
           </div>
-          <div class="pricing container-fluid row gap-2 mt-2">
+          <div class="pricing container-fluid row gap-4 mt-2">
             <div class="price row justify-content-between align-items-center">
               <div class="col-5 d-flex align-items-center gap-2">
                 <span class="h1 fw-bolder">$125.00</span>
