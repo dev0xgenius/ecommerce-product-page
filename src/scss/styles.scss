@@ -1,15 +1,5 @@
 @import "config/base";
 
-body {
-/*   min-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-height: auto; */
-}
-
 .carousel {
   button .wrapper {
     display: flex;
@@ -32,17 +22,20 @@ height: auto; */
 }
 
 .counter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
   padding: 1rem;
   border-radius: 0.75rem;
   background-color: hsl(223, 64%, 98%);
   
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 2rem; */
+  }
+  
   input {
     display: inline-block;
-    min-width: 1rem;
+    width: 100%;
     text-align: center;
     font-weight: bolder;
     border: none;

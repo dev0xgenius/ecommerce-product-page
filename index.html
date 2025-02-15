@@ -73,7 +73,7 @@
       </div>
     </header>
     <main>
-      <div class="container-sm d-lg-flex align-items-center">
+      <div class="container-sm d-lg-flex align-items-center justify-content-between">
         <div class="carousel carousel-fade row flex-md-row-reverse flex-lg-column-reverse p-lg-5 gap-4" id="productDisplay">
           <div class="carousel-indicators d-md-flex flex-md-column flex-lg-row col justify-content-md-center 
             justify-content-lg-between col-md-2 col-lg-12 py-md-5 p-lg-0 gap-0 gap-lg-1">
@@ -130,32 +130,33 @@
         <div class="content p-4 container-sm">
           <div class="text row flex-column gap-2">
             <span class="pretext">Sneaker Company</span>
-            <h1 class="fw-bolder display-3">Fall Limited Edition Sneakers</h1>
+            <h1 class="fw-bolder">Fall Limited Edition Sneakers</h1>
             <p>
               These low-profile sneakers are your perfect casual wear companion. Featuring a
               durable rubber outer sole, they’ll withstand everything the weather can offer.
             </p>
           </div>
           <div class="pricing container-fluid row gap-4 mt-2">
-            <div class="price row justify-content-between align-items-center">
+            <div class="price row justify-content-between align-items-center flex-lg-column align-items-lg-start">
               <div class="col-5 d-flex align-items-center gap-2">
                 <span class="h1 fw-bolder">$125.00</span>
                 <span class="badge bg-black h-auto">50%</span>
               </div>
-              <span class="col-5 text-decoration-line-through text-secondary fw-bolder text-end">$250.00</span>
+              <span class="col-5 text-decoration-line-through text-secondary fw-bolder text-end text-lg-start">$250.00</span>
             </div>
             <form class="cart-form row gap-2" action="#">
-              <div class="counter col col-sm-4">
-                <button type="button" data-bs-action="minus">
-                  <img src="src/assets/images/icon-minus.svg" alt="minus symbol" />
-                </button>
-                <input type="number" class="border-0" min="0" value="0" />
-                <button type="button" data-bs-action="add">
-                  <img src="src/assets/images/icon-plus.svg" alt="plus symbol" />
-                </button>
+              <div class="counter col-12 col-sm-4">
+                <div class="container-fluid">
+                  <button type="button" data-bs-action="minus">
+                    <img src="src/assets/images/icon-minus.svg" alt="minus symbol" />
+                  </button>
+                  <input type="number" min="0" value="0" />
+                  <button type="button" data-bs-action="add">
+                    <img src="src/assets/images/icon-plus.svg" alt="plus symbol" />
+                  </button>   
+                </div>
               </div>
-              <button type="submit"
-                                                                                                                                      class="col border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3 shadow-lg">
+              <button type="submit" class="col border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3 shadow-lg">
                 <div class="container-fluid">
                   <span class="align-top">
                     <img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" />
