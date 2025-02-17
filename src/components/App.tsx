@@ -15,10 +15,10 @@ export default function App() {
         </Container>
       </main>
       <footer className="attribution small text-center p-4">
-        <div className="wrapper">
+        <Container fluid>
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
           Coded by <a href="#">Your Name Here</a>.
-        </div>
+        </Container>
       </footer>
     </Container>
   )
