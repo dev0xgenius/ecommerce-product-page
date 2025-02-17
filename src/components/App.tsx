@@ -8,9 +8,9 @@ export default function App() {
     <Container fluid="sm" className="position-relative">
       <Header />
       <main>
-        <div className="container-sm d-lg-flex align-items-center justify-content-between">
+        <Container fluid="sm" className="d-lg-flex align-items-center justify-content-between">
           <ProductShowCase />
-          <div className="content p-4 container-sm">
+          <Container fluid="sm" className="content p-4">
             <div className="text row flex-column gap-2">
               <span className="pretext">Sneaker Company</span>
               <h1 className="fw-bolder">Fall Limited Edition Sneakers</h1>
@@ -29,7 +29,7 @@ export default function App() {
               </div>
               <form className="cart-form row gap-2" action="#">
                 <div className="counter col-12 col-sm-4">
-                  <div className="container-fluid">
+                  <Container fluid>
                     <button type="button" data-bs-action="minus">
                       <img src="src/assets/images/icon-minus.svg" alt="minus symbol" />
                     </button>
@@ -37,20 +37,20 @@ export default function App() {
                     <button type="button" data-bs-action="add">
                       <img src="src/assets/images/icon-plus.svg" alt="plus symbol" />
                     </button>   
-                  </div>
+                  </Container>
                 </div>
                 <button type="submit" className="col border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3 shadow-lg">
-                  <div className="container-fluid">
+                  <Container fluid>
                     <span className="align-top">
                       <img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" />
                     </span>
                     <span className="ms-2">Add to cart</span>
-                  </div>
+                  </Container>
                 </button>
               </form>
             </div>
-          </div>
-        </div>
+          </Container>
+        </Container>
       </main>
       <footer className="attribution small text-center p-4">
         <div className="wrapper">
