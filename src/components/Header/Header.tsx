@@ -1,11 +1,12 @@
 import React from 'react'
 import Container from "react-bootstrap/Container"
+import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => {
   return (
     <header className="border-bottom border-secondary">
       <Container>
-        <nav className="navbar navbar-expand-md">
+        <Navbar expand="md">
           <div className="container-fluid justify-content-start gap-3 p-4 py-2">
             <button className="menu-icon navbar-toggler border-0 shadow-none p-0" 
               type="button" data-bs-target="#menuNavbar" data-bs-toggle="offcanvas"
@@ -58,7 +59,7 @@ const Header = () => {
                 </div>
             </div>
           </div>
-        </nav>
+        </Navbar>
       </Container>
     </header>
   )
