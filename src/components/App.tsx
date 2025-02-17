@@ -1,8 +1,10 @@
 import React from 'react'
+import Header from './Header/Header.tsx'
 
 export default function App() {
   return (
-    <div classNameName="container-sm position-relative">
+    <div className="container-sm position-relative">
+      <Header />
       <main>
         <div className="container-sm d-lg-flex align-items-center justify-content-between">
           <div className="carousel carousel-fade row flex-md-row-reverse flex-lg-column-reverse p-lg-5 gap-4" id="productDisplay">
