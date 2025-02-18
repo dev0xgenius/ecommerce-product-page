@@ -1,0 +1,7 @@
+.tracker {
+  min-height: 82vw;
+  
+  @media (min-width: 575.98px) {
+    min-height: auto;
+  }
+}
