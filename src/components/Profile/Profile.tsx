@@ -14,12 +14,12 @@ export default function Profile() {
   return (
     <Row className="profile-section align-items-center gap-3 m-auto me-1">
       <Button className="bg-transparent border-0 col p-0" aria-controls="cartCard"
-        aria-expanded={cartIsOpen} onClick={toggleCart} onBlur={toggleCart}
+        aria-expanded={cartIsOpen} onClick={toggleCart}
       >
         <img src="src/assets/images/icon-cart.svg" width="24px" alt="cart icon" />
       </Button>
       <Button className="avatar col p-0 bg-transparent border-0" href="#" aria-controls="cartCard"
-        aria-expanded={cartIsOpen} onClick={toggleCart} onBlur={toggleCart}
+        aria-expanded={cartIsOpen} onClick={toggleCart}
       >
         <img src="src/assets/images/image-avatar.png" width="32px" alt="user avatar" />
       </Button>
