@@ -1,0 +1,12 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+.cart {
+  top: 100%; left: 0%;
+  right: 0%;
+  
+  @media (min-width: 575.98px) {
+    min-width: 16rem;
+    left: -250%;
+  }
+}

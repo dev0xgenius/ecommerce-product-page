@@ -3,26 +3,6 @@ body > .container-fluid > header {
     @include media-breakpoint-up("sm") {
       position: relative;
     }
-    
-    #cartCard {
-      top: 100%; left: 0%;
-      right: 0%;
-      
-      .card {
-        min-width: max-content;
-        min-height: 82vw;
-      }
-      
-      @include media-breakpoint-up("sm") {
-        min-width: 16rem;
-        left: -250%;
-        
-        .card {
-          min-height: auto;
-        }
-      }
-    }
-    
   
     .avatar {
       .container-fluid {

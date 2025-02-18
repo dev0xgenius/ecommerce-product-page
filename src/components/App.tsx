@@ -16,8 +16,8 @@ export default function App() {
       </main>
       <footer className="attribution small text-center p-4">
         <Container fluid>
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Your Name Here</a>.
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> 
+          Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
         </Container>
       </footer>
     </Container>
