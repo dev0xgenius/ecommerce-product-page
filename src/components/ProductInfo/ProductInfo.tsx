@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
-// import Row from 'react-bootstrap/Row'
+import Counter from '../Counter/Counter.tsx'
 
 const ProductInfo = () => {
   return (
@@ -22,17 +22,7 @@ const ProductInfo = () => {
           <span className="col-5 text-decoration-line-through text-secondary fw-bolder text-end text-lg-start">$250.00</span>
         </div>
         <form className="cart-form row gap-2" action="#">
-          <div className="counter col-12 col-sm-4">
-            <Container fluid>
-              <button type="button" data-bs-action="minus">
-                <img src="src/assets/images/icon-minus.svg" alt="minus symbol" />
-              </button>
-              <input type="number" min="0" value="0" />
-              <button type="button" data-bs-action="add">
-                <img src="src/assets/images/icon-plus.svg" alt="plus symbol" />
-              </button>   
-            </Container>
-          </div>
+          <Counter />
           <button type="submit" className="col border-0 bg-primary text-black text-center fw-bolder p-3 rounded-3 shadow-lg">
             <Container fluid>
               <span className="align-top">
