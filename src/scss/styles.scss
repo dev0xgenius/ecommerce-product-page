@@ -8,35 +8,6 @@
   font-size: .75rem;
 }
 
-.counter {
-  padding: 1rem;
-  border-radius: 0.75rem;
-  background-color: hsl(223, 64%, 98%);
-  
-  .container-fluid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* gap: 2rem; */
-  }
-  
-  input {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    font-weight: bolder;
-    border: none;
-    outline: none;
-    background-color: transparent;
-  }
-  
-  button {
-    display: inline-block;
-    border: none;
-    background-color: transparent;
-  }
-}
-
 #menuNavbar {
   button.navbar-toggler {
     width: max-content;

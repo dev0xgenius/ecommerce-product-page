@@ -1,16 +1,18 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
 
 export default function Counter() {
   return (
     <div className="counter col-12 col-sm-4">
       <Container fluid>
-        <button type="button" data-bs-action="minus">
+        <Button variant="none">
           <img src="src/assets/images/icon-minus.svg" alt="minus symbol" />
-        </button>
+        </Button>
         <input type="number" min="0" value="0" />
-        <button type="button" data-bs-action="add">
+        <Button variant="none">
           <img src="src/assets/images/icon-plus.svg" alt="plus symbol" />
-        </button>   
+        </Button>   
       </Container>
     </div>
   )
