@@ -1,17 +1,4 @@
-@import "bootstrap/scss/functions";
-
-@import "custom-colors";
-@import "custom-carousel";
-
-$box-shadow-lg: 0 1rem 3rem rgba($primary, .4);
-$grid-gutter-width: 0;
-
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
-
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
+@import 'global';
 
 // Optional parts
 @import "bootstrap/scss/utilities";
