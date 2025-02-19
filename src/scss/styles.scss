@@ -1,18 +1,5 @@
 @import "config/base";
 
-.carousel {
-  button .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 1rem;
-    border-radius: 500px;
-    background-color: white;
-  }
-}
-
 .pretext {
   color: $secondary;
   text-transform: uppercase;

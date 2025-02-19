@@ -1,8 +1,14 @@
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
+@import '../../scss/config/global';
 
 button.carouselIcon {
-  border-radius: 100px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
   background-color: $white;
   border: none;
+  
+  &:hover {
+    opacity: .5;
+    background-color: $white;
+  }
 }
