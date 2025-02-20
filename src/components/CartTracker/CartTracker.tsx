@@ -10,32 +10,37 @@ interface Props {
   items: number,
 };
 
+
 export default function CartTracker({ items }:Props) {
+  const Cart = () => {
+    return (
+      <>
+        <Row xs={3} className="align-items-center justify-content-between gap-0">
+          <span className="border border-danger col-3">
+            <img src="src/assets/images/image-product-1-thumbnail.jpg" 
+              width='100%' className='rounded-2'
+            />
+          </span>
+          <div className="border border-danger col-auto d-flex flex-column">
+            <span>Fall Limited Edition Sneakers</span>
+            <span>$125.00 x {items} <b>${items * 125.00}</b></span>
+          </div>
+          <span className="border border-danger col-1">
+            <img src="src/assets/images/icon-delete.svg" />
+          </span>
+        </Row> 
+        <Button className="p-3">Checkout</Button>
+      </>
+    );
+  }
+  
   return (
     <Container fluid className="p-2 h-100">
       <Card className={`shadow-lg rounded-4 border-0 ${styles.tracker}`}>
         <Card.Header className="h6 fw-bold bg-transparent p-4">Cart</Card.Header>
-        <Card.Body className="d-flex justify-content-center text-center flex-column h-auto">
+        <Card.Body className="d-grid text-center">
           {
-           (items > 0) ? 
-          <>
-            <Row xs={3} className="align-items-center justify-content-between gap-0">
-              <span className="border border-danger col-3">
-                <img src="src/assets/images/image-product-1-thumbnail.jpg" 
-                  width='100%' className='rounded-2'
-                />
-              </span>
-              <div className="border border-danger col-auto d-flex flex-column">
-                <span>Fall Limited Edition Sneakers</span>
-                <span>$125.00 x {items} <b>${items * 125.00}</b></span>
-              </div>
-              <span className="border border-danger col-1">
-                <img src="src/assets/images/icon-delete.svg" />
-              </span>
-            </Row> 
-            <Button className="p-3">Checkout</Button>
-          </>
-              :
+           (items > 0) ? <Cart items={items}/> :
             <Card.Text className="card-text fw-bolder align-self-center text-secondary">
               Your cart is empty.
             </Card.Text>
