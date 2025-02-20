@@ -18,14 +18,14 @@ export default function Profile() {
       >
         <img src="src/assets/images/icon-cart.svg" width="24px" alt="cart icon" />
       </Button>
-      <Button className="avatar col p-0 bg-transparent border-0" href="#" aria-controls="cartCard"
+      <Button className="avatar col p-0 bg-transparent border-0" aria-controls="cartCard"
         aria-expanded={cartIsOpen} onClick={toggleCart}
       >
         <img src="src/assets/images/image-avatar.png" width="32px" alt="user avatar" />
       </Button>
       <Collapse className={`position-absolute w-100 z-3 ${styles.cart}`} in={cartIsOpen}>
         <div id="cartCard">
-          <CartTracker />
+          <CartTracker items={3}/>
         </div>
       </Collapse>
     </Row>

@@ -20,7 +20,7 @@ export default function Header() {
               <Offcanvas.Body>
                 <Nav>
                   {["Collections", "Men", "Women", "About", "Contact"]
-                    .map((element, index) =><Nav.Link key={index} href="#">{element}</Nav.Link>)}
+                    .map((element, index) => <Nav.Link key={index} href="#">{element}</Nav.Link>)}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
