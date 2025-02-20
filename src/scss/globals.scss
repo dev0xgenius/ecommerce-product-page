@@ -8,15 +8,6 @@
   font-size: .75rem;
 }
 
-#menuNavbar {
-  button.navbar-toggler {
-    width: max-content;
-  }
-}
-
 .content p {
   color: $gray;
 }
-
-@import "section/header";
-@import "section/carousel";

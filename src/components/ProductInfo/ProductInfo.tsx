@@ -16,13 +16,13 @@ export default function ProductInfo() {
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
       </Row>
-      <Container fluid className="d-flex gap-4 mt-2">
+      <Container fluid className="d-flex flex-column gap-4 mt-2">
         <Row className="justify-content-between align-items-center flex-lg-column align-items-lg-start">
           <Col xs={5} className="d-flex align-items-center gap-2">
             <span className="h1 fw-bolder">$125.00</span>
             <span className="badge bg-black h-auto">50%</span>
           </Col>
-          <Col xs={5} as="span" 
+          <Col xs={5} as="span"
             className="text-decoration-line-through text-secondary fw-bolder text-end text-lg-start"
           >
             $250.00
