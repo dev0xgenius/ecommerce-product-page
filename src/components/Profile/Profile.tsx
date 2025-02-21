@@ -8,7 +8,7 @@ import CartTracker from '../CartTracker/CartTracker.tsx'
 import styles from './profile.module.scss'
 
 export default function Profile() {
-  const [cartIsOpen, setCartIsOpen] = useState<bool>(false);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
   const toggleCart = () => setCartIsOpen(!cartIsOpen);
   
   return (
@@ -25,7 +25,7 @@ export default function Profile() {
       </Button>
       <Collapse className={`position-absolute w-100 z-3 ${styles.cart}`} in={cartIsOpen}>
         <div id="cartCard">
-          <CartTracker items={3}/>
+          <CartTracker />
         </div>
       </Collapse>
     </Row>

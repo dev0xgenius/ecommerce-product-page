@@ -4,8 +4,14 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Counter from '../Counter/Counter.tsx'
+import { useState, useContext } from 'react'
+import { CartContext } from '../App.tsx'
+
 
 export default function ProductInfo() {
+  const { numberOfProducts } = useContext(CartContext);
+  const [itemsInCart, setItemsInCart] = useState(numberOfProducts);
+  
   return (
     <Container fluid="sm" className="content p-4">
       <Row className="flex-column gap-2">
@@ -29,8 +35,11 @@ export default function ProductInfo() {
           </Col>
         </Row>
         <Row className="gap-2">
-          <Counter count={0} onCount={updateCartBadge}/>
-          <Col as="button" className="btn btn-primary border-0 fw-bolder p-3 shadow-lg rounded-lg">
+          <Counter count={itemsInCart} onCount={() => {}}/>
+          <Col as="button" 
+            className="btn btn-primary border-0 fw-bolder p-3 shadow-lg rounded-lg"
+            onClick={() => {}}
+          >
             <Container fluid>
               <span><img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" /></span>
               <span className="ms-2">Add to cart</span>
