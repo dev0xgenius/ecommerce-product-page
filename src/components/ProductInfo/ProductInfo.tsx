@@ -29,12 +29,10 @@ export default function ProductInfo() {
           </Col>
         </Row>
         <Row className="gap-2">
-          <Counter />
+          <Counter count={0} onCount={updateCartBadge}/>
           <Col as="button" className="btn btn-primary border-0 fw-bolder p-3 shadow-lg rounded-lg">
             <Container fluid>
-              <span className="align-top">
-                <img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" />
-              </span>
+              <span><img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" /></span>
               <span className="ms-2">Add to cart</span>
             </Container>
           </Col>
