@@ -13,7 +13,9 @@ export const CartContext = createContext({
 
 export default function App() {
   const [numberOfProducts, setNumberOfProducts] = useState(0);
-  const handleCartUpdate = (updatedCartNumber) => setNumberOfProducts(p => updatedCartNumber);
+  const handleCartUpdate = (updatedCartNumber) => {
+    setNumberOfProducts(currentNumber => updatedCartNumber + currentNumber);
+  }
   
   return (
     <CartContext.Provider value={{numberOfProducts, handleCartUpdate}}>

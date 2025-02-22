@@ -13,7 +13,7 @@ export default function ProductInfo() {
   const { numberOfProducts, handleCartUpdate } = useContext(CartContext);
   const [counter, setCounter] = useState<C>({
     value: numberOfProducts,
-    onCount: (value) => {}
+    onCount: (value: number) => {}
   });
   
   const updateCounterValue = (updatedCountValue: number) => {
