@@ -6,11 +6,11 @@ import Button from 'react-bootstrap/Button'
 import Collapse from 'react-bootstrap/Collapse'
 import Badge from 'react-bootstrap/Badge'
 import CartTracker from '../CartTracker/CartTracker.tsx'
-import { CartContext } from '../App.tsx'
+import { CartState } from '../App.tsx'
 import styles from './profile.module.scss'
 
 export default function Profile() {
-  const { numberOfProducts } = useContext(CartContext);
+  const { numberOfProducts } = useContext(CartState);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const toggleCart = () => setIsCartOpen(!isCartOpen);
   

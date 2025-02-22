@@ -6,19 +6,22 @@ import Header from './Header/Header.tsx'
 
 import { useState, createContext } from 'react'
 
-export const CartContext = createContext({
+export const CartState = createContext({
   numberOfProducts: 0,
   handleCartUpdate: (updatedCartNumber: number):void => {}
 });
 
 export default function App() {
   const [numberOfProducts, setNumberOfProducts] = useState(0);
-  const handleCartUpdate = (updatedCartNumber) => {
-    setNumberOfProducts(currentNumber => updatedCartNumber + currentNumber);
+  const handleCartUpdate = (updatedCartNumber: number, reset: boolean=false) => {
+    setNumberOfProducts(currentNumber => {
+      if (!reset) updatedCartNumber = updatedCartNumber + currentNumber;
+      return updatedCartNumber;
+    });
   }
   
   return (
-    <CartContext.Provider value={{numberOfProducts, handleCartUpdate}}>
+    <CartState.Provider value={{numberOfProducts, handleCartUpdate}}>
       <Container fluid="sm" className="position-relative">
         <Header />
         <main>
@@ -34,6 +37,6 @@ export default function App() {
           </Container>
         </footer>
       </Container>
-     </CartContext.Provider>
+     </CartState.Provider>
   )
 };

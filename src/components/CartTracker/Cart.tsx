@@ -4,10 +4,11 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 interface Props {
-  items: number
+  items: number,
+  onClearCartItems: (items: number) => void
 }
 
-export default function Cart ({ items }: Props) {
+export default function Cart ({ items, onClearCartItems }: Props) {
   return (
     <>
       <Row xs={3} className="align-items-center justify-content-between gap-0">
@@ -20,7 +21,7 @@ export default function Cart ({ items }: Props) {
           <span className="h6 fw-normal">Fall Limited Edition Sneakers</span>
           <span>$125.00 x {items} <b>${125.00 * items}.00</b></span>
         </Col>
-        <Col xs={1} as="span">
+        <Col xs={1} onClick={() => onClearCartItems(0)}>
           <img src="src/assets/images/icon-delete.svg" />
         </Col>
       </Row> 

@@ -5,12 +5,12 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Counter from '../Counter/Counter.tsx'
 import { useState, useContext, useEffect } from 'react'
-import { CartContext } from '../App.tsx'
+import { CartState } from '../App.tsx'
 
 import { Counter as C } from '../Counter/types.ts'
 
 export default function ProductInfo() {
-  const { numberOfProducts, handleCartUpdate } = useContext(CartContext);
+  const { numberOfProducts, handleCartUpdate } = useContext(CartState);
   const [counter, setCounter] = useState<C>({
     value: numberOfProducts,
     onCount: (value: number) => {}
