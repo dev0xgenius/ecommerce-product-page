@@ -1,29 +1,40 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Container from'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import Collapse from 'react-bootstrap/Collapse'
+import Badge from 'react-bootstrap/Badge'
 import CartTracker from '../CartTracker/CartTracker.tsx'
+import { CartContext } from '../App.tsx'
 import styles from './profile.module.scss'
 
 export default function Profile() {
-  const [cartIsOpen, setCartIsOpen] = useState(false);
-  const toggleCart = () => setCartIsOpen(!cartIsOpen);
+  const { numberOfProducts } = useContext(CartContext);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
   
   return (
     <Row className="profile-section align-items-center gap-3 m-auto me-1">
-      <Button className="bg-transparent border-0 col p-0" aria-controls="cartCard"
-        aria-expanded={cartIsOpen} onClick={toggleCart}
+      <Button className="bg-transparent border-0 col p-0 position-relative" 
+        aria-controls="cartCard" aria-expanded={isCartOpen} onClick={toggleCart}
       >
         <img src="src/assets/images/icon-cart.svg" width="24px" alt="cart icon" />
+        <Badge className="rounded-pill text-center px-2" style={{
+            display: numberOfProducts > 0 ? "inline-block" : "none",
+            position: "absolute", top: "-50%", left: "25%",
+            fontSize: "0.618rem",
+          }}
+        >
+          { numberOfProducts }
+        </Badge>
       </Button>
       <Button className="avatar col p-0 bg-transparent border-0" aria-controls="cartCard"
-        aria-expanded={cartIsOpen} onClick={toggleCart}
+        aria-expanded={isCartOpen} onClick={toggleCart}
       >
         <img src="src/assets/images/image-avatar.png" width="32px" alt="user avatar" />
       </Button>
-      <Collapse className={`position-absolute w-100 z-3 ${styles.cart}`} in={cartIsOpen}>
+      <Collapse className={`position-absolute w-100 z-3 ${styles.cart}`} in={isCartOpen}>
         <div id="cartCard">
           <CartTracker />
         </div>
