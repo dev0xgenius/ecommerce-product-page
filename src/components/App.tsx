@@ -8,12 +8,12 @@ import { useState, createContext } from 'react'
 
 export const CartContext = createContext({
   numberOfProducts: 0,
-  handleCartUpdate: ():void => {}
+  handleCartUpdate: (updatedCartNumber: number):void => {}
 });
 
 export default function App() {
   const [numberOfProducts, setNumberOfProducts] = useState(0);
-  const handleCartUpdate = () => {}
+  const handleCartUpdate = (updatedCartNumber) => setNumberOfProducts(p => updatedCartNumber);
   
   return (
     <CartContext.Provider value={{numberOfProducts, handleCartUpdate}}>

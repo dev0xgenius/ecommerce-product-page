@@ -4,13 +4,33 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Counter from '../Counter/Counter.tsx'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { CartContext } from '../App.tsx'
 
+import { Counter as C } from '../Counter/types.ts'
 
 export default function ProductInfo() {
-  const { numberOfProducts } = useContext(CartContext);
-  const [itemsInCart, setItemsInCart] = useState(numberOfProducts);
+  const { numberOfProducts, handleCartUpdate } = useContext(CartContext);
+  const [counter, setCounter] = useState<C>({
+    value: numberOfProducts,
+    onCount: (value) => {}
+  });
+  
+  const updateCounterValue = (updatedCountValue: number) => {
+    setCounter(prevState => ({
+      ...prevState,
+      value: updatedCountValue
+    }));
+  }
+  
+  const updateCart = () => handleCartUpdate(counter.value);
+  
+  useEffect(() => {
+    setCounter(prevState => ({
+      ...prevState, 
+      onCount: updateCounterValue
+    }));
+  }, []);
   
   return (
     <Container fluid="sm" className="content p-4">
@@ -35,10 +55,9 @@ export default function ProductInfo() {
           </Col>
         </Row>
         <Row className="gap-2">
-          <Counter count={itemsInCart} onCount={() => {}}/>
-          <Col as="button" 
+          <Counter value={counter.value} onCount={counter.onCount} />
+          <Col as="button" onClick={updateCart}
             className="btn btn-primary border-0 fw-bolder p-3 shadow-lg rounded-lg"
-            onClick={() => {}}
           >
             <Container fluid>
               <span><img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" /></span>

@@ -10,7 +10,7 @@ import { useContext } from 'react'
 import Cart from './Cart.tsx'
 
 export default function CartTracker() {
-  const { numberOfProducts, handleCartUpdate} = useContext(CartContext);
+  const { numberOfProducts } = useContext(CartContext);
   
   return (
     <Container fluid className="p-2 h-100">
