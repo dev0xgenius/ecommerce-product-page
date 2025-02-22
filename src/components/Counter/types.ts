@@ -4,6 +4,6 @@ export interface Counter {
 }
 
 export enum CountDirection {
-  up = 1,
-  down = -1
+  UP = 1,
+  DOWN = -1
 }
