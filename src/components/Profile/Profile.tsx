@@ -15,7 +15,7 @@ export default function Profile() {
   const toggleCart = () => setIsCartOpen(!isCartOpen);
   
   return (
-    <Row className="profile-section align-items-center gap-3 m-auto me-1">
+    <Row className="align-items-center gap-3 m-auto me-1 position-sm-relative">
       <Button className="bg-transparent border-0 col p-0 position-relative" 
         aria-controls="cartCard" aria-expanded={isCartOpen} onClick={toggleCart}
       >

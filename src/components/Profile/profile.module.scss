@@ -1,4 +1,11 @@
+@import '../../scss/config/global';
+
 .cart {
   top: 100%; left: 0%;
   right: 0%;
+  
+  @include media-breakpoint-up("sm") {
+    min-width: 24rem;
+    left: -400%; bottom: 0%;
+  }
 }

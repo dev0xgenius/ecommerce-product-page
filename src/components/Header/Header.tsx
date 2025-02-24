@@ -6,9 +6,11 @@ import Navbar from 'react-bootstrap/Navbar'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Profile from '../Profile/Profile.tsx'
 
+import styles from './header.module.scss'
+
 export default function Header() {
   return (
-    <header className="border-bottom border-secondary">
+    <header className={`border-bottom border-secondary`}>
       <Navbar expand="md">
         <Container fluid className="gap-3 p-4 py-2">
           <Navbar.Toggle className="border-0 shadow-none p-0" aria-controls="menuNavbar" />
