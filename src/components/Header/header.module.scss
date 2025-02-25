@@ -1,0 +1,9 @@
+@import "../../scss/config/global";
+
+.header {
+  @include media-breakpoint-up("md") {
+    .navLink {
+      font-weight: lighter;
+    }
+  }
+}

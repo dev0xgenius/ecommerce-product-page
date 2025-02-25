@@ -22,10 +22,10 @@ export default function App() {
   
   return (
     <CartState.Provider value={{numberOfProducts, handleCartUpdate}}>
-      <Container fluid="md" className="position-relative">
+      <Container fluid="lg" className="position-relative">
         <Header />
         <main>
-          <Container fluid="md" className="d-lg-flex align-items-center justify-content-between">
+          <Container fluid="lg" className="d-lg-flex align-items-center justify-content-between">
             <ProductShowCase />
             <ProductInfo />
           </Container>
