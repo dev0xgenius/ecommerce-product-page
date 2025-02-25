@@ -22,13 +22,13 @@ export default function Header() {
               <Offcanvas.Body className="mt-md-2">
                 <Nav>
                   {["Collections", "Men", "Women", "About", "Contact"]
-                    .map((element, index) => 
+                  .map((element, index) => 
                     <Nav.Link key={index} className={`${styles.navLink}`} href="#">{element}</Nav.Link>
                   )}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-            <Navbar.Brand className="fw-bolder col-md-auto m-0">sneakers</Navbar.Brand>
+            <Navbar.Brand className="fw-bolder col-md-auto m-0 display-1">sneakers</Navbar.Brand>
           </Row>
           <Profile />
         </Container>

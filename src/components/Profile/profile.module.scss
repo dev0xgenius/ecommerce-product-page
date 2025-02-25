@@ -9,3 +9,11 @@
     left: -400%; bottom: 0%;
   }
 }
+
+button.avatar {
+  width: 2rem;
+
+  @include media-breakpoint-up("md") {
+    width: 3rem;
+  }
+}

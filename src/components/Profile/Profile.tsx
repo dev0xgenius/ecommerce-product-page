@@ -29,10 +29,11 @@ export default function Profile() {
           { numberOfProducts }
         </Badge>
       </Button>
-      <Button className="avatar col p-0 bg-transparent border-0" aria-controls="cartCard"
-        aria-expanded={isCartOpen} onClick={toggleCart}
+      <Button className={`col p-0 bg-transparent border-0 border-hover rounded-circle
+        ${styles.avatar} border-primary`} 
+        aria-controls="cartCard" aria-expanded={isCartOpen} onClick={toggleCart}
       >
-        <img src="src/assets/images/image-avatar.png" width="32px" alt="user avatar" />
+        <img src="src/assets/images/image-avatar.png" width="100%" alt="user avatar" />
       </Button>
       <Collapse className={`position-absolute w-100 z-3 ${styles.cart}`} in={isCartOpen}>
         <div id="cartCard">

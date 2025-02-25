@@ -21,11 +21,12 @@ button.carouselIcon {
   button {
     padding: 0;
     overflow: hidden;
-    border-radius: $border-radius * 2;
     transition: $transition-base;
+    border: none;
+    border-radius: $border-radius * 2;
     
     &:hover {
-      outline: 2px solid $primary;
+      border: 2px solid $primary;
       opacity: .5;
       background-color: white;
     }

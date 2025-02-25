@@ -33,11 +33,11 @@ export default function ProductInfo() {
   }, []);
   
   return (
-    <Container fluid="sm" className="content p-4">
+    <Container fluid="sm" className="content p-4 w-100">
       <Row className="flex-column gap-2">
         <span className="pretext">Sneaker Company</span>
         <h1 className="fw-bolder display-3">Fall Limited Edition Sneakers</h1>
-        <p>
+        <p className="text-gray">
           These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
