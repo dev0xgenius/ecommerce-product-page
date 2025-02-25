@@ -5,6 +5,9 @@
 $utilities: map-merge($utilities, (
   "position" : map-merge(map-get($utilities, "position"),
     (responsive: true)
+  ),
+  "rounded-end" : map-merge(map-get($utilities, "rounded-end"),
+    (responsive : true)
   )
 ));
 

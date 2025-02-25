@@ -7,8 +7,32 @@ button.carouselIcon {
   background-color: $white;
   border: none;
   
+  @include media-breakpoint-up("md") {
+    display: none;
+  }
+  
   &:hover {
     opacity: .5;
     background-color: $white;
+  }
+}
+
+.indicators {
+  button {
+    padding: 0;
+    overflow: hidden;
+    border-radius: $border-radius * 2;
+    transition: $transition-base;
+    
+    &:hover {
+      outline: 2px solid $primary;
+      opacity: .5;
+      background-color: white;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

@@ -10,17 +10,17 @@ import styles from './header.module.scss'
 
 export default function Header() {
   return (
-    <header className={`border-bottom border-secondary ${styles.header}`}>
+    <header className={`${styles.header}`}>
       <Navbar expand="md">
-        <Container fluid className="d-flex align-items-md-center gap-3 p-4 py-2">
+        <Container fluid="sm" className="gap-3 p-4 py-2">
           <Navbar.Toggle className="border-0 shadow-none p-0" aria-controls="menuNavbar" />
           <Row className="align-items-md-start flex-md-row-reverse gap-md-4">
             <Navbar.Offcanvas placement="start" className="p-4 w-75 col p-md-0" aria-labelledby="menuNavbar" id="menuNavbar">
               <Navbar.Toggle className="ps-3" aria-controls="menuNavbar">
-                <img src="src/assets/images/icon-close.svg" alt="close button" />
+                <im src="src/assets/images/icon-close.svg" alt="close button" />
               </Navbar.Toggle>
-              <Offcanvas.Body>
-                <Nav className="border border-danger">
+              <Offcanvas.Body className="mt-md-2">
+                <Nav>
                   {["Collections", "Men", "Women", "About", "Contact"]
                     .map((element, index) => 
                     <Nav.Link key={index} className={`${styles.navLink}`} href="#">{element}</Nav.Link>
@@ -28,7 +28,7 @@ export default function Header() {
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-            <Navbar.Brand className="fw-bolder col-md-auto m-0 border border-danger">sneakers</Navbar.Brand>
+            <Navbar.Brand className="fw-bolder col-md-auto m-0">sneakers</Navbar.Brand>
           </Row>
           <Profile />
         </Container>
