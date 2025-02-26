@@ -7,10 +7,7 @@ $utilities: map-merge($utilities, (
   "rounded-end" : map-merge(map-get($utilities, "rounded-end"),(responsive : true)),
   "rounded-start" : map-merge(map-get($utilities, "rounded-start"),(responsive : true)),
   "font-size" : map-merge(map-get($utilities, "font-size"), (responsive : true)),
-  "border" : map-merge(map-get($utilities, "border"), (
-    state : hover,
-    responsive : true
-  ))
+  "border-bottom" : map-merge(map-get($utilities, "border-bottom"), (responsive : true))
 ));
 
 @import "bootstrap/scss/reboot";
