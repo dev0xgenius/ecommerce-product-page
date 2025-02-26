@@ -15,9 +15,11 @@ export default function Profile() {
   const toggleCart = () => setIsCartOpen(!isCartOpen);
   
   return (
-    <Row className="align-items-center gap-3 m-auto me-1 position-sm-relative">
+    <Row className="align-items-center gap-3 m-auto me-1 position-sm-relative"
+      onMouseEnter={toggleCart} onMouseLeave={toggleCart}
+    >
       <Button className="bg-transparent border-0 col p-0 position-relative" 
-        aria-controls="cartCard" aria-expanded={isCartOpen} onClick={toggleCart}
+        aria-controls="cartCard" aria-expanded={isCartOpen}
       >
         <img src="src/assets/images/icon-cart.svg" width="24px" alt="cart icon" />
         <Badge className="rounded-pill text-center px-2" style={{
@@ -29,9 +31,8 @@ export default function Profile() {
           { numberOfProducts }
         </Badge>
       </Button>
-      <Button className={`col p-0 bg-transparent border-0 border-hover rounded-circle
-        ${styles.avatar} border-primary`} 
-        aria-controls="cartCard" aria-expanded={isCartOpen} onClick={toggleCart}
+      <Button className={`col p-0 bg-transparent rounded-circle ${styles.avatar}`}
+        aria-controls="cartCard" aria-expanded={isCartOpen}
       >
         <img src="src/assets/images/image-avatar.png" width="100%" alt="user avatar" />
       </Button>

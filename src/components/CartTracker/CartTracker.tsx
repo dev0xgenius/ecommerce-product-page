@@ -28,7 +28,7 @@ export default function CartTracker() {
             <Card.Text 
               className="fw-bolder d-flex text-secondary" 
               style={{
-                minHeight: "200px", 
+                minHeight: "180px", 
                 height: "100%"
               }}
             >
