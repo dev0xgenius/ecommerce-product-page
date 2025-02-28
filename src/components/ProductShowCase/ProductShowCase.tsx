@@ -5,11 +5,18 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
+import CloseButton from 'react-bootstrap/CloseButton'
+import Modal from 'react-bootstrap/Modal'
 
 import styles from './productShowCase.module.scss'
 
-export default function ProductShowCase() {
+interface Props {
+  modal: boolean
+}
+
+export default function ProductShowCase(props: Props) {
   const [index, setIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const prevIcon = (
     <Button className={styles.carouselIcon}>
@@ -35,6 +42,7 @@ export default function ProductShowCase() {
         <Carousel fade slide={false} activeIndex={index}
           onSelect={selectedIndex => setIndex(selectedIndex)}
           prevIcon={prevIcon} nextIcon={nextIcon} indicators={false}
+          onClick={() => setModalOpen(m => !m)}
           className="rounded-end-md-4 rounded-start-lg-4 overflow-hidden w-100"
         >
           <Carousel.Item>
@@ -73,6 +81,15 @@ export default function ProductShowCase() {
         <Button variant="none" onClick={() => setIndex(3)} style={addStyle(index == 3)}>
           <img src="src/assets/images/image-product-4-thumbnail.jpg" />
         </Button>
+      </div>
+      <div className="d-none d-lg-block w-100 position-relative">
+        <Modal show={props.modal && modalOpen} onHide={() => setModalOpen(false)} 
+          className="p-3 p-md-2 p-lg-0" centered>
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            <ProductShowCase modal={false}/>
+          </Modal.Body>
+        </Modal>
       </div>
     </Row>
   )

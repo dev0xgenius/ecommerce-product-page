@@ -27,7 +27,7 @@ export default function App() {
         <main>
           <Container fluid className="d-lg-flex align-items-center justify-content-between 
             py-lg-2 p-xl-5 gap-xl-5">
-            <ProductShowCase />
+            <ProductShowCase modal={true}/>
             <ProductInfo />
           </Container>
         </main>
