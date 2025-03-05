@@ -1,0 +1,28 @@
+@import '../../scss/config/global';
+
+.cart {
+  top: 100%; left: 0%;
+  right: 0%;
+  
+  @include media-breakpoint-up("sm") {
+    min-width: 24rem;
+    left: -400%; bottom: 0%;
+  }
+  
+  @include media-breakpoint-up("md") {
+    left: -325%;
+  }
+}
+
+button.avatar {
+  width: 2rem;
+  border: none;
+  
+  &:hover {
+    border: 2px solid $primary;
+  }
+  
+  @include media-breakpoint-up("md") {
+    width: 3rem;
+  }
+}

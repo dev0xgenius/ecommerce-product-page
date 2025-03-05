@@ -1,0 +1,25 @@
+@import "../../scss/config/global";
+
+.header {
+  @include media-breakpoint-up("md") {
+    .navLink {
+      position: relative;
+      font-weight: lighter;
+      transition: $transition-base;
+      
+      &:hover {
+        &:after {
+          position: absolute;
+          left: 0%; bottom: -60%;
+          right: 0%;
+          content: "";
+          width: 100%;
+          margin: 0 auto;
+          min-height: .25rem;
+          border-radius: .5rem;
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}

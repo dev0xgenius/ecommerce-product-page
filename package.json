@@ -1,29 +1,31 @@
 {
   "name": "ecommerce-product-page",
-  "version": "1.0.0",
-  "description": "Frontend Mentor Solution",
-  "main": "index.html",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dev0xgenius/ecommerce-product-page.git"
+  "devDependencies": {
+    "@types/react": "^19.0.9",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.20.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "prettier": "^3.5.1",
+    "sass": "^1.84.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.1.0"
   },
-  "keywords": [
-    "e-commerce",
-    "product",
-    "page",
-    "frontendmentor",
-    "solution"
-  ],
-  "author": "dev0xgenius",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dev0xgenius/ecommerce-product-page/issues"
-  },
-  "homepage": "https://github.com/dev0xgenius/ecommerce-product-page#readme",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0"
   }
 }

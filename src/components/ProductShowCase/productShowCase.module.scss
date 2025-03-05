@@ -1,0 +1,44 @@
+@import '../../scss/config/global';
+
+button.carouselIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: $white;
+  border: none;
+  
+  @include media-breakpoint-up("md") {
+    display: none;
+  }
+  
+  &:hover {
+    opacity: .5;
+    background-color: $white;
+  }
+}
+
+.indicators {
+  button {
+    padding: 0;
+    overflow: hidden;
+    transition: $transition-base;
+    border: none;
+    border-radius: $border-radius * 2;
+    
+    &:hover {
+      border: 2px solid $primary;
+      opacity: .5;
+      background-color: white;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.carouselIcon.modal {
+  display: block;
+  position: relative;
+}
