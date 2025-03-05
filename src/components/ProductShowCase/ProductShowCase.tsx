@@ -18,14 +18,23 @@ export default function ProductShowCase(props: Props) {
   const [index, setIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
 
+  const handleCarouselClick = (evt) => {
+    if (window.innerWidth > 991)
+      setModalOpen(m => !m);
+  }
+  
   const prevIcon = (
-    <Button className={styles.carouselIcon}>
+    <Button className={`${styles.carouselIcon} ${props.modal ? "" : styles.modal}`}
+    style={{left: props.modal ? "" : "-50%"}}
+    >
       <img src="src/assets/images/icon-previous.svg" />
     </Button>
   );
 
   const nextIcon = (
-    <Button className={styles.carouselIcon}>
+    <Button className={`${styles.carouselIcon} ${props.modal ? "" : styles.modal}`}
+      style={{right: props.modal ? "" : "-50%"}}
+    >
       <img src="src/assets/images/icon-next.svg" />
     </Button>
   );
@@ -42,8 +51,9 @@ export default function ProductShowCase(props: Props) {
         <Carousel fade slide={false} activeIndex={index}
           onSelect={selectedIndex => setIndex(selectedIndex)}
           prevIcon={prevIcon} nextIcon={nextIcon} indicators={false}
-          onClick={() => setModalOpen(m => !m)}
-          className="rounded-end-md-4 rounded-start-lg-4 overflow-hidden w-100"
+          onClick={handleCarouselClick}
+          className="rounded-end-md-4 rounded-start-lg-4 w-100"
+          style={{overflow: props.modal ? "hidden" : "visible"}}
         >
           <Carousel.Item>
             <img src="src/assets/images/image-product-1.jpg"
@@ -82,10 +92,15 @@ export default function ProductShowCase(props: Props) {
           <img src="src/assets/images/image-product-4-thumbnail.jpg" />
         </Button>
       </div>
-      <div className="d-none d-lg-block w-100 position-relative">
+      <div className={styles.modal}>
         <Modal show={props.modal && modalOpen} onHide={() => setModalOpen(false)} 
           className="p-3 p-md-2 p-lg-0" centered>
-          <Modal.Header closeButton></Modal.Header>
+          <Modal.Header>
+            <Button
+              onClick={() => setModalOpen(false)}
+              className="border-0 position-absolute end-0"
+            ><img src="src/assets/images/icon-close.svg" fill="pink"/></Button>
+          </Modal.Header>
           <Modal.Body>
             <ProductShowCase modal={false}/>
           </Modal.Body>

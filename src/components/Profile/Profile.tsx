@@ -16,7 +16,7 @@ export default function Profile() {
   
   return (
     <Row className="align-items-center gap-3 m-auto me-1 position-sm-relative"
-      onMouseEnter={toggleCart} onMouseLeave={toggleCart}
+      onMouseOver={toggleCart}
     >
       <Button className="bg-transparent border-0 col p-0 position-relative" 
         aria-controls="cartCard" aria-expanded={isCartOpen}
