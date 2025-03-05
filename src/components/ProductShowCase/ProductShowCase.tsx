@@ -99,7 +99,7 @@ export default function ProductShowCase(props: Props) {
             <Button
               onClick={() => setModalOpen(false)}
               className="border-0 position-absolute end-0"
-            ><img src="src/assets/images/icon-close.svg" fill="pink"/></Button>
+            ><img src="src/assets/images/icon-close.svg" /></Button>
           </Modal.Header>
           <Modal.Body>
             <ProductShowCase modal={false}/>
