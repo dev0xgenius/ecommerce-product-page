@@ -1,12 +1,13 @@
-import React from 'react'
 import { useState, useContext } from 'react'
-import Container from'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import Collapse from 'react-bootstrap/Collapse'
 import Badge from 'react-bootstrap/Badge'
 import CartTracker from '../CartTracker/CartTracker.tsx'
 import { CartState } from '../App.tsx'
+
+import cartIcon from '../../assets/images/icon-cart.svg';
+import userAvatar from '../../assets/images/image-avatar.png';
 import styles from './profile.module.scss'
 
 export default function Profile() {
@@ -16,12 +17,12 @@ export default function Profile() {
   
   return (
     <Row className="align-items-center gap-3 m-auto me-1 position-sm-relative"
-      onMouseOver={toggleCart}
+      onClick={toggleCart} onMouseLeave={() => setIsCartOpen(false)}
     >
       <Button className="bg-transparent border-0 col p-0 position-relative" 
         aria-controls="cartCard" aria-expanded={isCartOpen}
       >
-        <img src="src/assets/images/icon-cart.svg" width="24px" alt="cart icon" />
+        <img src={cartIcon} width="24px" alt="cart icon" />
         <Badge className="rounded-pill text-center px-2" style={{
             display: numberOfProducts > 0 ? "inline-block" : "none",
             position: "absolute", top: "-50%", left: "25%",
@@ -34,7 +35,7 @@ export default function Profile() {
       <Button className={`col p-0 bg-transparent rounded-circle ${styles.avatar}`}
         aria-controls="cartCard" aria-expanded={isCartOpen}
       >
-        <img src="src/assets/images/image-avatar.png" width="100%" alt="user avatar" />
+        <img src={userAvatar} width="100%" alt="user avatar" />
       </Button>
       <Collapse className={`position-absolute w-100 z-3 ${styles.cart}`} in={isCartOpen}>
         <div id="cartCard">

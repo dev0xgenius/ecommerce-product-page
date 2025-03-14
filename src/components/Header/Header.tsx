@@ -1,11 +1,9 @@
-import React from 'react'
 import Container from "react-bootstrap/Container"
 import Row from 'react-bootstrap/Row'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Profile from '../Profile/Profile.tsx'
-import { useEffect, useState } from 'react'
 
 import styles from './header.module.scss'
 
@@ -38,8 +36,4 @@ export default function Header() {
       </Navbar>
     </header>
   )
-}
-
-function addHoverEffect (linkActive: boolean): any {
-  return linkActive ? styles.active : null;
 }

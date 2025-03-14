@@ -1,6 +1,6 @@
-import React from 'react'
+// import React from 'react'
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Counter from '../Counter/Counter.tsx'
@@ -8,12 +8,13 @@ import { useState, useContext, useEffect } from 'react'
 import { CartState } from '../App.tsx'
 
 import { Counter as C } from '../Counter/types.ts'
+import cartIconSvg from '../../assets/images/icon-cart.svg';
 
 export default function ProductInfo() {
   const { numberOfProducts, handleCartUpdate } = useContext(CartState);
   const [counter, setCounter] = useState<C>({
     value: numberOfProducts,
-    onCount: (value: number) => {}
+    onCount: () => {}
   });
   
   const updateCounterValue = (updatedCountValue: number) => {
@@ -36,7 +37,7 @@ export default function ProductInfo() {
     <Container fluid="sm" className="content p-4 w-100">
       <Row className="flex-column gap-2">
         <span className="pretext">Sneaker Company</span>
-        <h1 className="fw-bolder display-3">Fall Limited Edition Sneakers</h1>
+        <h1 className="fw-bolder display-4">Fall Limited Edition Sneakers</h1>
         <p className="text-gray">
           These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
@@ -60,7 +61,7 @@ export default function ProductInfo() {
             className="btn btn-primary border-0 fw-bolder p-3 shadow-lg rounded-lg"
           >
             <Container fluid>
-              <span><img src="src/assets/images/icon-cart.svg" width="16px" alt="cart image" /></span>
+              <span><img src={cartIconSvg} width="16px" alt="cart image" /></span>
               <span className="ms-2">Add to cart</span>
             </Container>
           </Col>
