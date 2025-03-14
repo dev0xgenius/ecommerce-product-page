@@ -9,10 +9,10 @@ import Modal from 'react-bootstrap/Modal'
 import prevIconSvg from '../../assets/images/icon-previous.svg';
 import nextIconSvg from '../../assets/images/icon-next.svg';
 
-import img1 from '../../../public/product/image-product-1.jpg';
-import img2 from '../../../public/product/image-product-2.jpg';
-import img3 from '../../../public/product/image-product-3.jpg';
-import img4 from '../../../public/product/image-product-4.jpg';
+import img1 from '/product/image-product-1.jpg';
+import img2 from '/product/image-product-2.jpg';
+import img3 from '/product/image-product-3.jpg';
+import img4 from '/product/image-product-4.jpg';
 
 import styles from './productShowCase.module.scss'
 
