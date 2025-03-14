@@ -62,8 +62,8 @@ export default function ProductShowCase(props: Props) {
           style={{overflow: props.modal ? "hidden" : "visible"}}
         >
           {
-            productImages.map((productImage) => {
-              return <Carousel.Item>
+            productImages.map((productImage, index) => {
+              return <Carousel.Item key={index}>
                 <img src={productImage} className="d-block w-100 mw-100" alt="Sneaker image 3" />
               </Carousel.Item>
             })
