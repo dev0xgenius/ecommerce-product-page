@@ -10,7 +10,7 @@ import styles from './header.module.scss'
 
 export default function Header() {
   return (
-    <header className={`border-bottom border-1 border-secondary ${styles.header}`}>
+    <header className={`${styles.header}`}>
       <Navbar expand="md">
         <Container fluid="sm" className="gap-3 p-4 py-2">
           <Navbar.Toggle className="border-0 shadow-none p-0" aria-controls="menuNavbar" />
