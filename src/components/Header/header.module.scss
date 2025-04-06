@@ -1,6 +1,7 @@
 @import "../../scss/config/global";
 
 .header {
+	border-bottom: 1px solid whitesmoke;
   @include media-breakpoint-up("md") {
     .navLink {
       position: relative;
