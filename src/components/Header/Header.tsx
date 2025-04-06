@@ -20,7 +20,7 @@ export default function Header() {
                 <img src={closeIconSvg} alt="close button" />
               </Navbar.Toggle>
               <Offcanvas.Body className="mt-md-2">
-                <Nav className="pb-lg-2 position-relative">
+                <Nav className="pb-lg-2 d-flex gap-2 position-relative">
                   {["Collections", "Men", "Women", "About", "Contact"]
                   .map((element, index) =>
                     <Nav.Link key={index} className={`${styles.navLink}`} href="#">
